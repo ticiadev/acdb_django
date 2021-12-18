@@ -19,5 +19,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('villagers/', views.villagerlist.as_view())
+    path('villagers/', views.villagerlist.as_view()),
+    path('villagers/<int:id>', views.villagertest.as_view())
 ]

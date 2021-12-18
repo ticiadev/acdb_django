@@ -18,3 +18,11 @@ class villagerlist(APIView):
 
      def post(self):
          pass
+
+class villagertest(APIView):
+
+     def get(self, request, id):
+         villager = villagers.objects.get(id=id)
+         serializer = villagersSerializer(villager)
+         print(serializer)
+         return Response(serializer.data)
