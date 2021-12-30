@@ -6,21 +6,21 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import villager
-from .serializers import villagerSerializer
+from .models import Villager
+from .serializers import VillagerSerializer
 
-class villagerlist(APIView):
+class VillagerList(APIView):
 
      def get(self, request):
-         villager1 = villager.objects.all()
-         serializer = villagerSerializer(villager1, many=True)
+         villager1 = Villager.objects.all()
+         serializer = VillagerSerializer(villager1, many=True)
          return Response(serializer.data)
 
-class villagerdetail(APIView):
+class VillagerDetail(APIView):
 
      def get(self, request, id):
-         villager1 = villager.objects.get(id=id)
-         serializer = villagerSerializer(villager1)
+         villager1 = Villager.objects.get(id=id)
+         serializer = VillagerSerializer(villager1)
          # print(serializer)
          return Response(serializer.data)
 
