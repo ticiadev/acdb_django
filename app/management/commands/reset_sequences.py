@@ -3,6 +3,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import connections
 
+# Code from https://stackoverflow.com/questions/32531677/django-reset-auto-increment-pk-id-field-for-production
 
 def dictfetchall(cursor):
     """Return all rows from a cursor as a dict"""
