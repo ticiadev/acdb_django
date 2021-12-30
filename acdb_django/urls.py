@@ -20,13 +20,11 @@ from app import views
 
 router = routers.DefaultRouter()
 router.register(r'villagers', views.VillagerViewSet)
-router.register(r'personalities', views.PersonalityViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls',
-                              namespace='rest_framework'))
-    # path('villagers/', views.VillagerList.as_view()),
-    # path('villagers/<int:id>', views.VillagerDetail.as_view())
+                              namespace='rest_framework')),
+    path('personalities/', views.PersonalityList.as_view())
 ]
