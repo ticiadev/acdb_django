@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import villagers
+from .models import villager
 
 # Register your models here.
-admin.site.register(villagers)
+admin.site.register(villager)

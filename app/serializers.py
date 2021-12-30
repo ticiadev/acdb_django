@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import villagers
+from .models import villager
 
-class villagersSerializer(serializers.ModelSerializer):
+class villagerSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = villagers
+        model = villager
         fields = '__all__'

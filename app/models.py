@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class villagers(models.Model):
+class villager(models.Model):
     name = models.CharField(max_length=12)
     species = models.CharField(max_length=12)
     birthday_month = models.IntegerField()
