@@ -7,7 +7,7 @@ class Personality(models.Model):
     gender = models.CharField(max_length=8)
 
     def __str__(self):
-        return self.name
+        return self.type
 
     class Meta:
         verbose_name_plural = "personalities"

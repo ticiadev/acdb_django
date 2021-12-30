@@ -16,6 +16,7 @@ class VillagerViewSet(viewsets.ModelViewSet):
     queryset = Villager.objects.all()
     serializer_class = VillagerSerializer
 
+
 class PersonalityList(APIView):
 
     def get(self, request):
