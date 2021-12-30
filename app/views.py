@@ -13,15 +13,15 @@ class villagerlist(APIView):
 
      def get(self, request):
          villager1 = villager.objects.all()
-         serializer = villagerSerializer(villager1, many= True)
+         serializer = villagerSerializer(villager1, many=True)
          return Response(serializer.data)
 
 class villagerdetail(APIView):
 
      def get(self, request, id):
-         villager = villager.objects.get(id=id)
-         serializer = villagerSerializer(villager)
-         print(serializer)
+         villager1 = villager.objects.get(id=id)
+         serializer = villagerSerializer(villager1)
+         # print(serializer)
          return Response(serializer.data)
 
      def post(self, request, id):
