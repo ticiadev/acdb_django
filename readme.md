@@ -17,7 +17,9 @@ endpoints example:
 
 ### Project Evolution
 
-I first created this database completely in Postgres and manually inputted the data. Then I switched to Flask/SQLAlchemy to follow along with what we were learning in the Nucamp SQL course. Now, I’ve decided to switch to Django to have use a framework that already has everything I’ll need built-in (including user accounts easier front-end development). I'm still implementing the basic functions and endpoints, but in the future hope to create a complete web app with a frontend for user access.
+I first created this database completely in Postgres and manually inputted 
+the data. Then I switched to Flask/SQLAlchemy to follow along with what I was 
+learning in the Nucamp SQL course. Now, I’ve decided to switch to Django to have use a framework that already has everything I’ll need built-in (including user accounts easier front-end development). I'm still implementing the basic functions and endpoints, but in the future hope to create a complete web app with a frontend for user access.
 
 ### ORM Implementation
 
@@ -48,7 +50,7 @@ Using itertools, I created a list of all possible coffee combinations, then pass
 
 ### Roadmap
 
-I've created a kanban board of my progress and new features I want to implement in this project, which I will keep adding to: [Link](https://www.notion.so/DevOps-Django-portfolio-project-roadmap-3a4af7320d0844809f80b86f43a6994b)
+I've created a kanban board of my progress and new features I want to implement in this project, which I will keep adding to: [Link](https://ticiax.notion.site/DevOps-Django-portfolio-project-roadmap-3a4af7320d0844809f80b86f43a6994b)
 
 ### Issues
 
