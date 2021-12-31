@@ -20,14 +20,6 @@ class Coffee(models.Model):
     def __str__(self):
         return self.id
 
-class Game(models.Model):
-    name = models.CharField(max_length=20, unique=True)
-    console = models.CharField(max_length=12)
-    year_released = models.IntegerField()
-
-    def __str__(self):
-        return self.name
-
 class Villager(models.Model):
     SUBTYPE_CHOICES = [("A", "A"), ("B", "B")]
     name = models.CharField(max_length=12, unique=True)
@@ -44,8 +36,7 @@ class Villager(models.Model):
     # personality_id = models.ForeignKey(Personality,
     #                                    on_delete=models.CASCADE)
     # coffee_id = models.ForeignKey(Coffee, on_delete=models.SET_NULL,
-    # null=True)
-    # game_id = models.ManyToManyField(Game)
+    # blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -57,6 +48,15 @@ class Amiibo(models.Model):
 
     def __str__(self):
         return self.id
+
+class Game(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    console = models.CharField(max_length=12)
+    year_released = models.IntegerField()
+    # villagers = models.ManyToManyField(Villager)
+
+    def __str__(self):
+        return self.name
 
 class House(models.Model):
     wallpaper = models.CharField(max_length=16)
@@ -74,8 +74,8 @@ class Furniture(models.Model):
     sell_price = models.IntegerField()
     style = models.CharField(max_length=20, blank=True)
     on_surface = models.BooleanField(blank=True, null=True)
-    length = models.IntegerField(null=True)
-    width = models.IntegerField(null=True)
+    length = models.IntegerField(blank=True, null=True)
+    width = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.name
