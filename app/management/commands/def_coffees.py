@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         combo = [['Blue Mtn', 'Kilimanjaro', 'Mocha', 'Blend'],
-                 [0, 1, 2, 3],
+                 ['None', 'Little', 'Regular', 'A Lot'],
                  [0, 1, 2, 3]]
         blends = list(itertools.product(*combo))
         coffees = []
