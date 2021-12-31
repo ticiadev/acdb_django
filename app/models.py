@@ -44,6 +44,7 @@ class Villager(models.Model):
 class Amiibo(models.Model):
     series = models.CharField(max_length=20, unique=True)
     card_id = models.IntegerField()
+    acquired = models.BooleanField(blank=True, null=True)
     # villager = models.OneToOneField(Villager)
 
     def __str__(self):
