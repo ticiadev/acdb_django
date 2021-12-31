@@ -7,8 +7,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import viewsets
-from .models import Villager, Personality
-from .serializers import VillagerSerializer, PersonalitySerializer
+from .models import Villager, Personality, Coffee, Game, Amiibo, House, \
+    Furniture
+from .serializers import VillagerSerializer, PersonalitySerializer, \
+    CoffeeSerializer, GameSerializer, AmiiboSerializer, HouseSerializer, \
+    FurnitureSerializer
 
 
 class VillagerViewSet(viewsets.ModelViewSet):
