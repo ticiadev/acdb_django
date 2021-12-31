@@ -33,7 +33,7 @@ class Villager(models.Model):
     is_sanrio = models.BooleanField(blank=True, null=True)
     subtype = models.CharField(max_length=1, choices=SUBTYPE_CHOICES,
                                blank=True)
-    # personality_id = models.ForeignKey(Personality,
+    # personality = models.ForeignKey(Personality,
     #                                    on_delete=models.CASCADE)
     # coffee_id = models.ForeignKey(Coffee, on_delete=models.SET_NULL,
     # blank=True, null=True)
@@ -44,7 +44,7 @@ class Villager(models.Model):
 class Amiibo(models.Model):
     series = models.CharField(max_length=20, unique=True)
     card_id = models.IntegerField()
-    # villager_id = models.ForeignKey(Villager, on_delete=models.CASCADE)
+    # villager = models.OneToOneField(Villager)
 
     def __str__(self):
         return self.id
@@ -62,8 +62,8 @@ class House(models.Model):
     wallpaper = models.CharField(max_length=16)
     floor = models.CharField(max_length=16)
     music = models.CharField(max_length=16, blank=True)
-    # game_id = models.ForeignKey(Game, on_delete=models.CASCADE)
-    # villager_id = models.ForeignKey(Villager, on_delete=models.CASCADE)
+    # game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    # villager = models.ForeignKey(Villager, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.id
@@ -76,6 +76,7 @@ class Furniture(models.Model):
     on_surface = models.BooleanField(blank=True, null=True)
     length = models.IntegerField(blank=True, null=True)
     width = models.IntegerField(blank=True, null=True)
+    # house_id = models.ManytoManyField(House)
 
     def __str__(self):
         return self.name
