@@ -50,7 +50,7 @@ Using itertools, I created a list of all possible coffee combinations, then pass
 
 ### Roadmap
 
-I've created a kanban board of my progress and new features I want to implement in this project, which I will keep adding to: [Link](https://ticiax.notion.site/DevOps-Django-portfolio-project-roadmap-3a4af7320d0844809f80b86f43a6994b)
+I've created a kanban board of my progress and new features I want to implement in this project, which I will keep adding to: [Link](https://ticiadev.notion.site/DevOps-Django-portfolio-project-roadmap-3a4af7320d0844809f80b86f43a6994b)
 
 ### Issues
 
